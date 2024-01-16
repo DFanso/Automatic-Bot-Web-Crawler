@@ -1,0 +1,23 @@
+{
+  "name": "automatic-bot-web-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+    
+  },
+  "author": "dfanso",
+  "license": "ISC",
+  "dependencies": {
+    "api": "^6.1.1",
+    "axios": "^1.5.1",
+    "discord": "^0.8.2",
+    "discord.js": "^14.13.0",
+    "js": "^0.1.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.1"
+  }
+}
