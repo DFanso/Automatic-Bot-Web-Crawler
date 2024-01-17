@@ -13,13 +13,13 @@ module.exports = {
         if (newArticle) {
           const channel = await client.channels.fetch(channelId);
           if (channel) {
-            channel.send(`New article published: ${newArticle.title}\nRead more: ${newArticle.link}`);
+            channel.send(`New article published: ${newArticle.title}\nRead more: ${newArticle.link}?from=discord`);
           } else {
             console.error('Channel not found. Please check if the bot has permissions and the right channel ID.');
           }
         } else {
           console.log('No new articles found at this time.');
         }
-      }, 1800);
+      }, 180000);
 },
 };
