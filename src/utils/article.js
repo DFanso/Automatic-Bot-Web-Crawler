@@ -6,7 +6,10 @@ const path = require('path');
 const POSTED_ARTICLES_PATH = path.join(__dirname, 'postedArticles.json');
 
 async function checkForNewArticles() {
-    const browser = await puppeteer.launch();
+    const browser = await puppeteer.launch({
+        headless: true, // or 'new' as the warning suggests to opt in early for the new headless mode
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+      });
     const page = await browser.newPage();
 
     try {
