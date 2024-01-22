@@ -16,6 +16,17 @@ const client = new Client({ intents:
 
 ] });
 
+// Global error handlers
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  // Additional error handling logic
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught Exception:', error);
+  // Additional error handling logic
+});
+
 // Dynamically read event files
 const eventFiles = fs.readdirSync('./src/events').filter(file => file.endsWith('.js'));
 
